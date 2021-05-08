@@ -1,0 +1,1 @@
+insert into pessoa values (1, 'Debora', 36);
