@@ -1,6 +1,7 @@
 package com.debora.aula2.controllers;
 
 import com.debora.aula2.model.Pessoa;
+import com.debora.aula2.services.EmpresaService;
 import com.debora.aula2.services.PessoaService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -14,7 +15,8 @@ class MainControllerTest {
     void pessoa() {
         //Setup
         PessoaService pessoaService = Mockito.mock(PessoaService.class);
-        MainController m = new MainController(pessoaService);
+        EmpresaService empresaService = Mockito.mock(EmpresaService.class);
+        MainController m = new MainController(pessoaService, empresaService);
 
         Pessoa mockedPessoa = new Pessoa("Fernando", 39);
         when(pessoaService.getPessoa()).thenReturn(mockedPessoa);
