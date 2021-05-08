@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmpresaService {
     public Empresa getEmpresa() {
-        return new Empresa("456", "Empresa nova");
+        return new Empresa("789", "Empresa nova");
     }
 }
